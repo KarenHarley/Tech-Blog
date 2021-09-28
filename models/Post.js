@@ -30,7 +30,7 @@ Post.init(
   {
     sequelize,
     underscored: true,
-    modelName: 'painting',
+    modelName: 'post',
   }
 );
 
