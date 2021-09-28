@@ -6,15 +6,15 @@ const userData = [
    password: "Bobby3453"
   },
   {
-    title: 'harleyRacer457',
+    username: 'harleyRacer457',
    password: "harleyGoesFast"
   },
   {
-    title: 'NerdKnows',
+    username: 'NerdKnows',
    password: "JoIsSmarterThanYou56"
   },
   {
-    title: 'BarbiePrincessCodes',
+    username: 'BarbiePrincessCodes',
    password: "iAmPerfectInEveryWay"
   },
 ];
