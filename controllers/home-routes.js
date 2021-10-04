@@ -25,7 +25,45 @@ router.get('/', async (req, res) => {
       res.status(500).json(err);
     }
   });
-  
-  //test for project
+ // GET one post
+router.get('/post/:id', async (req, res) => {
+  try {
+    const dbPostData = await Post.findByPk(req.params.id, {
+    });
+
+    const post = dbPostData.get({ plain: true });
+    res.render('post', { post, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+}); 
+
+
+
+
+  // Login route
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
+
+
+  // Sign Up route
+  router.get('/signUp', (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+    res.render('signUp');
+  });
+
+
+
+
+  module.exports = router;
 
  
