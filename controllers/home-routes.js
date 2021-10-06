@@ -18,7 +18,8 @@ router.get("/", async (req, res) => {
 
     res.render("homepage", {
       posts,
-    loggedIn: req.session.loggedIn});
+      loggedIn: req.session.loggedIn,
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -27,7 +28,15 @@ router.get("/", async (req, res) => {
 // GET one post
 router.get("/post/:id", async (req, res) => {
   try {
-    const dbPostData = await Post.findByPk(req.params.id, {});
+    const dbPostData = await Post.findByPk(req.params.id, {
+      include: [
+        //this is a join
+        {
+          model: User,
+          attributes: ["username"],
+        },
+      ],
+    });
 
     const post = dbPostData.get({ plain: true });
     res.render("post", { post, loggedIn: req.session.loggedIn });

@@ -3,6 +3,12 @@
     border: solid;
     padding: 20px;
     margin: 30px;
+   
+}
+.card a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 .card header{
     padding: 10px;

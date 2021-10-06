@@ -1,7 +1,15 @@
 {{#if loggedIn}}
-<section class="post">
-  {{> posts}}
-</section>
+  <section class="post">
+
+    <section class="card">
+      <header>{{title}}
+        By:
+        {{user.username}}
+        Date Created: FIX TIME
+        {{posts.created_at}}</header>
+      <p>{{content}}</p>
+    </section>
+  </section>
 {{else}}
-<a href="/login">You must login first to view this page</a>
+  <a href="/login">You must login first to view this page</a>
 {{/if}}
