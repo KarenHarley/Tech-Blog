@@ -26,12 +26,13 @@ router.get('/', (req, res) => {
     res.render('homepage', { loggedIn: req.session.loggedIn });
 });
 */
+
 // Login
 router.post("/login", async (req, res) => {
   try {
     const dbUserData = await User.findOne({
       where: {
-        password: req.body.password,
+        username: req.body.username,
       },
     });
 
