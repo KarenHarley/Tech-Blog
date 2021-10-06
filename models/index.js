@@ -12,6 +12,7 @@ Post.belongsTo(User, {
 });
 
 
+//this could be the problem
 
 User.hasMany(Comments, {
   foreignKey: 'writer',
@@ -30,5 +31,8 @@ Post.hasMany(Comments, {
 Comments.belongsTo(Post, {
   foreignKey: 'belongs_to_post',
 });
+
+
+
 
 module.exports = { User,Post,Comments};
