@@ -23,7 +23,7 @@
         cols="30"
         rows="10"
       ></textarea>
-      <button onclick="handleCommentSubmit("{{post.id}}")">Submit</button>
+     <button data-postId="{{post.id}}" onclick="handleCommentSubmit()">Submit</button>
     </form>
   </section>
   <script src="/js/comment.js"></script>
