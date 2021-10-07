@@ -1,47 +1,97 @@
-.card{
-    background-color: aqua;
-    border: solid;
-    padding: 20px;
-    margin: 30px;
-   
+.card {
+  background-color: rgb(55, 139, 250);
+  border: solid;
+  padding: 20px;
+  margin: 30px;
 }
 .card a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
-.card header{
-    padding: 10px;
+.card header {
+  padding: 10px;
 }
-nav  a {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    
+nav a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 nav {
-    border-bottom: solid;
+  border-bottom: solid;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #3f51b5;
 }
- h1{
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
+nav button {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 20px;
+}
+h1 {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
 }
 
-form p{
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
+form p {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
 }
 textarea {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 form button {
-    align-items: center;
+  align-items: center;
+}
+#username-login,
+#password-login,
+#username-signup,
+#password-signup {
+  margin: 20px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.page-title {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  background-color: rgb(60, 135, 249);
+  color: white;
+}
+label {
+  padding: 20px;
+  font-size: 20px;
+}
+.form-group {
+  display: flex;
+  justify-content: center;
+}
+.form-group button {
+  /* remove default behavior */
+  appearance: none;
+  -webkit-appearance: none;
+
+  /* usual styles */
+  padding: 10px;
+  border: none;
+  background-color: #3f51b5;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 50%;
+}
+.login-card a {
+  padding-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  color: black;
 }

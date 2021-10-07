@@ -1,4 +1,4 @@
-//const { combineTableNames } = require("sequelize/types/lib/utils");
+
 
 const comment = document.querySelector("#commentText").value;
 console.log("Js script is linked!")
