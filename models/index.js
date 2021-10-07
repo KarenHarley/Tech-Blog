@@ -12,7 +12,6 @@ Post.belongsTo(User, {
 });
 
 
-//this could be the problem
 
 User.hasMany(Comments, {
   foreignKey: 'writer',
