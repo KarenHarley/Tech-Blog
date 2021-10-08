@@ -2,12 +2,12 @@
   <section class="post">
 
     <section class="card">
-      <header>{{post.title}}
+      <header>{{posts.title}}
         By:
-        {{post.user.username}}
-        Date Created: FIX TIME
-        {{post.createdAt}}</header>
-      <p>{{post.content}}</p>
+        {{user.username}}
+        Date Created: 
+        {{format_date posts.createdAt}}</header>
+      <p>{{posts.content}}</p>
     </section>
     <section id="enteredComment">
       <!--
@@ -23,7 +23,7 @@
         cols="30"
         rows="10"
       ></textarea>
-     <button data-postId= "{{post.id}}""  id = "postBtn">Submit</button>
+     <button data-postId= "{{posts.id}}"  id = "postBtn">Submit</button>
     </form>
   </section>
   <script src="/js/comment.js"></script>

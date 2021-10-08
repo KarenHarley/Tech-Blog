@@ -1,10 +1,11 @@
 <section class="card">
   <a href="/post/{{id}}">
-    <header>{{post.title}}
+    <header>{{title}}
       By:
-      {{user.username}}
-      Date Created: FIX TIME
-      {{post.createdAt}}</header>
-    <p>{{post.content}}</p>
+      {{User.username}}
+      Date Created:
+      {{format_date createdAt}}</header>
+    <p>{{content}}</p>
   </a>
 </section>
+<!-- FIx the bug with FER-->
