@@ -65,7 +65,7 @@ router.get("/signUp", (req, res) => {
 router.post("/new/comment", async (req, res) => {
   let belongs_to_post = req.body.belongs_to_post;
   let content = req.body.content;
-  let writer = req.session.user_id;
+  let writer = req.session.user.id;//req.session.user.id
 
   try {
     const createUser = await Comments.create({
