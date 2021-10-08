@@ -24,6 +24,8 @@ router.get("/", async (req, res) => {
 });
 // GET one post
 router.get("/post/:id", async (req, res) => {
+  let post;
+  let comments;
   try {
     const dbPostData = await Post.findByPk(req.params.id, {
       include: [
@@ -34,9 +36,8 @@ router.get("/post/:id", async (req, res) => {
         },
       ],
     });
-      const post = dbPostData.get({ plain: true });
+       post = dbPostData.get({ plain: true });
      
-      res.render("post", { post, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -52,12 +53,12 @@ router.get("/post/:id", async (req, res) => {
       ],
       where:{ belongs_to_post: req.params.id}
     });
-    const comments = allComments.map((comment) => comment.get({ plain: true }));
-    res.render("post", { comments, loggedIn: req.session.loggedIn });
+     comments = allComments.map((comment) => comment.get({ plain: true }));
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
+  res.render("post", { comments,post, loggedIn: req.session.loggedIn });
 })
 
 // Login route
