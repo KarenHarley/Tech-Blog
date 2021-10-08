@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post } = require("../models");
+const { User, Post ,Comments} = require("../models");
 
 //show all of the posts in  "home" (homepage)
 router.get("/", async (req, res) => {
@@ -61,4 +61,22 @@ router.get("/signUp", (req, res) => {
   res.render("signUp");
 });
 
+//create a new comment in database
+router.post("/new/comment", async (req, res) => {
+  let belongs_to_post = req.body.belongs_to_post;
+  let content = req.body.content;
+  let writer = req.session.id;;
+
+  try {
+    const createUser = await Comments.create({
+      belongs_to_post: belongs_to_post,
+      content: content,
+      writer: writer,
+    });
+    res.json(createUser);
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
+  }
+})
 module.exports = router;
