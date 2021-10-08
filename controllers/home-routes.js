@@ -34,14 +34,31 @@ router.get("/post/:id", async (req, res) => {
         },
       ],
     });
-
-    const posts = dbPostData.get({ plain: true });
-    res.render("post", { posts, loggedIn: req.session.loggedIn });
+      const post = dbPostData.get({ plain: true });
+     
+      res.render("post", { post, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
-});
+  try {
+    const allComments = await Comments.findAll({
+      include: [
+        //this is a join
+        {
+          model: User,
+          attributes: ["username"],
+        },
+      ],
+      where:{ belongs_to_post: req.params.id}
+    });
+    const comments = allComments.map((comment) => comment.get({ plain: true }));
+    res.render("post", { comments, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
 
 // Login route
 router.get("/login", (req, res) => {
