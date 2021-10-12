@@ -1,0 +1,10 @@
+ <h1>Your Dashboard</h1>
+ {{#if loggedIn}}
+{{#each posts as |post|}}
+{{> posts}}
+{{/each}}
+<br>
+<button>+ New Post</button>
+{{else}}
+  <a href="/login">You must login first to view this page</a>
+{{/if}}

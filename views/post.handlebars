@@ -14,6 +14,9 @@
       <h2>{{comment.content}} </h2>
       <h2>{{comment.author}} </h2>
       -->
+      {{#each comments as |comment|}}
+{{> comments}}
+{{/each}}
     </section>
     <form>
       <p>Comment</p>
