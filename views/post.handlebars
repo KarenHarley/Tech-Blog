@@ -4,16 +4,12 @@
     <section class="card">
       <header>{{post.title}}
         By:
-        {{user.username}}
+        {{post.User.username}}
         Date Created:
         {{format_date post.createdAt}}</header>
       <p>{{post.content}}</p>
     </section>
     <section id="enteredComment">
-      <!--
-      <h2>{{comment.content}} </h2>
-      <h2>{{comment.author}} </h2>
-      -->
       {{#each comments as |comment|}}
 {{> comments}}
 {{/each}}

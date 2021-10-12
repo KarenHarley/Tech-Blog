@@ -37,6 +37,7 @@ router.get("/post/:id", async (req, res) => {
       ],
     });
     post = dbPostData.get({ plain: true });
+    console.log(post);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -63,7 +64,7 @@ router.get("/post/:id", async (req, res) => {
 // Login route
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/dashboard");
     return;
   }
   res.render("login");
@@ -72,7 +73,7 @@ router.get("/login", (req, res) => {
 // Sign Up route
 router.get("/signUp", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect("/dashboard");
     return;
   }
   res.render("signUp");
@@ -100,7 +101,8 @@ router.post("/new/comment", async (req, res) => {
 //Render all of the dashboard
 
 router.get("/dashboard", async (req, res) => {
-  try {
+  let posts = [];
+  if (req.session.loggedIn) {
     const dbPostData = await Post.findAll({
       include: [
         //this is a join
@@ -112,12 +114,38 @@ router.get("/dashboard", async (req, res) => {
       where: { author: req.session.user.id },
     });
 
-    const posts = dbPostData.map((post) => post.get({ plain: true }));
-    console.log(posts);
-    res.render("dashboard", { posts, loggedIn: req.session.loggedIn });
+    posts = dbPostData.map((post) => post.get({ plain: true }));
+  }
+  console.log(posts);
+  res
+    .render("dashboard", { posts, loggedIn: req.session.loggedIn })
+
+});
+
+//render page to create a new post
+
+router.get("/create", (req, res) => {
+  res.render("createAPost",{loggedIn: req.session.loggedIn });
+});
+
+//Create a new Post
+router.post("/create", async (req, res) => {
+  let title = req.body.title;
+  let content = req.body.content;
+  let author = req.session.user.id
+
+  try {
+    const createPost = await Post.create({
+      title: title,
+      content: content,
+      author: author,
+    });
+    res.json(createPost);
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
+
+  
 });
 module.exports = router;
