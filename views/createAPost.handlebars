@@ -1,18 +1,31 @@
 {{#if loggedIn}}
 
   <section class="card">
+    
     <form id="newPost">
-      <header>Create a New Post</header>
+      <header class = "centeredText">Create a New Post</header>
       <p>Title</p>
       <input type="text" id="titleInput" placeholder="Title" />
       <p>Content</p>
-      <input type="text" id="contentInput" placeholder="Content" />
+     <!-- <textarea id="contentInput" class = "contentBox" placeholder="Content" </textarea> -->
+      <textarea
+        name="commentText"
+        id="contentInput"
+        class="contentBox"
+        cols="100"
+        rows="10"
+        placeholder=" Content"
+      ></textarea>
+<div id = "createPostbutton">
       <button id="createPostBtn" class="">Create</button>
+      </div>
     </form>
   </section>
-  <a href="/create">+ New Post</a>
+  <div class = "button">
+  <a href="/create" class  ="button-link">+ New Post</a>
+  </div>
 {{else}}
-  <a href="/login">You must login first to view this page</a>
+  <a href="/login" class= "loginMessage">You must login first to view this page</a>
 {{/if}}
 
 <script src="/js/newPost.js"></script>

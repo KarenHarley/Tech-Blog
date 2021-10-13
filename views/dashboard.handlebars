@@ -4,7 +4,9 @@
 {{> postsForDashboard}}
 {{/each}}
 <br>
-<a href="/create">+ New Post</a>
+<div class = "button">
+<a href="/create" class= "button-link">+ New Post</a>
+</div>
 {{else}}
-  <a href="/login">You must login first to view this page</a>
+  <a href="/login" class= "loginMessage">You must login first to view this page</a>
 {{/if}}

@@ -1,31 +1,38 @@
-{{#if loggedIn}}
-  <section class="post">
 
-    <section class="card">
-      <header>{{post.title}}
-        By:
-        {{post.User.username}}
-        Date Created:
-        {{format_date post.createdAt}}</header>
-      <p>{{post.content}}</p>
+  <section class="card onePost">
+  <header>
+      <h2>{{post.title}}</h2>
+      <div class="usernameAndDate">
+        <h3>
+          By:
+          {{post.User.username}}</h3>
+        <h3>
+          Date Created:
+          {{format_date post.createdAt}}</h3></div></header>
+    <p>{{post.content}}</p>
     </section>
+    <h3 id = "CommentHeader">Comments:</h3>
     <section id="enteredComment">
       {{#each comments as |comment|}}
 {{> comments}}
 {{/each}}
     </section>
-    <form>
-      <p>Comment</p>
+    {{#if loggedIn}}
+    <section class = "card onePost">
+    <form id = "commentForm">
+      <header class="centeredText">Write a Comment</header>
       <textarea
         name="commentText"
         id="commentText"
         cols="30"
-        rows="10"
+       rows="10"
       ></textarea>
+      <div id = "commentButton">
       <button data-postId="{{post.id}}" id="postBtn">Submit</button>
+      </div>
     </form>
   </section>
   <script src="/js/comment.js"></script>
 {{else}}
-  <a href="/login">You must login first to view this page</a>
+  <a href="/login" class= "loginMessage">You must login first to write a Comment</a>
 {{/if}}
