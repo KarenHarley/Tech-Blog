@@ -186,4 +186,24 @@ router.put("/edit/:id", async (req, res) => {
     res.status(500).json({ message: err });
   }
 });
+
+//delete a post
+router.delete("/delete/:id", async (req, res) => {
+  try {
+    const destroyedPost = await Post.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!destroyedPost) {
+      res.status(404).json({ message: "No product found! " });
+      return;
+    }
+
+    res.status(200).json(destroyedPost);
+  } catch (err) {
+    res.status(500).json({ message: err });
+  }
+});
 module.exports = router;

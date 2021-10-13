@@ -3,7 +3,7 @@ const contentInput = document.querySelector("#contentInput");
 const form = document.querySelector("#newPost");
 const handleSubmit = async (event) => {
     event.preventDefault();
-    // console.log("Helloooo")
+   
     const title = titleInput.value;
     const content = contentInput.value;
  
