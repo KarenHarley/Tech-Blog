@@ -2,9 +2,9 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
+  "heroku_d78bb8d2e415694",
+  "b142ae9a3c09de",
+  "63203f3a",
   {
     host: 'us-cdbr-east-04.cleardb.com',
     dialect: 'mysql',
