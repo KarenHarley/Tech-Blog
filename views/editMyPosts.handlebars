@@ -1,0 +1,20 @@
+{{#if loggedIn}}
+
+  <section class="card">
+    <form data-postId="{{post.id}}" id="updatingPost">
+      <header>Edit Post</header>
+      <p>Title</p>
+      <input type="text" id="titleInput" value="{{post.title}}" />
+      <p>Content</p>
+      <input type="text" id="contentInput" value="{{post.content}}" />
+      <button id="updatePostBtn" class="">Update Post</button>
+      <button  id="deletePostBtn" class="">Delete</button>
+    </form>
+  </section>
+  <a href="/create">+ New Post</a>
+{{else}}
+  <a href="/login">You must login first to view this page</a>
+{{/if}}
+
+<script src="/js/editPost.js"></script>
+<script src="/js/deletePost.js"></script>

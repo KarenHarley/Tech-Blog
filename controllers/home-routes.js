@@ -81,14 +81,15 @@ router.get("/signUp", (req, res) => {
 
 //create a new comment in database
 router.post("/new/comment", async (req, res) => {
-  let belongs_to_post = req.body.belongs_to_post;
-  let content = req.body.content;
+  //normally need to do this but not anymore thanks to the ...req.body
+  //this is for referance
+  // let belongs_to_post = req.body.belongs_to_post;
+  //let content = req.body.content;
   let writer = req.session.user.id; //req.session.user.id
 
   try {
     const createUser = await Comments.create({
-      belongs_to_post: belongs_to_post,
-      content: content,
+      ...req.body,
       writer: writer,
     });
     res.json(createUser);
@@ -117,35 +118,72 @@ router.get("/dashboard", async (req, res) => {
     posts = dbPostData.map((post) => post.get({ plain: true }));
   }
   console.log(posts);
-  res
-    .render("dashboard", { posts, loggedIn: req.session.loggedIn })
-
+  res.render("dashboard", { posts, loggedIn: req.session.loggedIn });
 });
 
 //render page to create a new post
 
 router.get("/create", (req, res) => {
-  res.render("createAPost",{loggedIn: req.session.loggedIn });
+  res.render("createAPost", { loggedIn: req.session.loggedIn });
 });
 
 //Create a new Post
 router.post("/create", async (req, res) => {
-  let title = req.body.title;
-  let content = req.body.content;
-  let author = req.session.user.id
-
+  //normally need to do this but not anymore thanks to the ...req.body
+  //this is for referance
+  //let title = req.body.title;
+  // let content = req.body.content;
+  // let author = req.session.user.id
   try {
     const createPost = await Post.create({
-      title: title,
-      content: content,
-      author: author,
+      ...req.body,
+      author: req.session.user.id,
     });
-    res.json(createPost);
+    res.status(200).json(createPost);
   } catch (err) {
     console.log(err);
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
+});
 
-  
+router.get("/edit/:id", async (req, res) => {
+  try {
+    const dbPostData = await Post.findByPk(req.params.id, {
+      include: [
+        //this is a join
+        {
+          model: User,
+          attributes: ["username"],
+        },
+      ],
+    });
+    post = dbPostData.get({ plain: true });
+    console.log(post);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+  res.render("editMyPosts", { post, loggedIn: req.session.loggedIn });
+});
+
+// Update a post
+router.put("/edit/:id", async (req, res) => {
+  try {
+    const updatedPost = await Post.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!updatedPost) {
+      res.status(404).json({ message: "No post found!" });
+      return;
+    }
+
+    res.status(200).json(updatedPost);
+
+  } catch (err) {
+    res.status(500).json({ message: err });
+  }
 });
 module.exports = router;

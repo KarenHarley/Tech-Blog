@@ -1,18 +1,18 @@
- {{#if loggedIn}}
+{{#if loggedIn}}
 
-<section class="card">
-  <form id="newPost">
-    <header>Create a New Post</header>
-    <p>Title</p>
-    <input type="text"  id="titleInput" placeholder="Title" />
-    <p>Content</p>
-    <input type="text"id="contentInput" placeholder="Content" />
-     <button id="createPostBtn" class="">Create</button>
-  </form>
-</section>
-<a href="/create">+ New Post</a>
+  <section class="card">
+    <form id="newPost">
+      <header>Create a New Post</header>
+      <p>Title</p>
+      <input type="text" id="titleInput" placeholder="Title" />
+      <p>Content</p>
+      <input type="text" id="contentInput" placeholder="Content" />
+      <button id="createPostBtn" class="">Create</button>
+    </form>
+  </section>
+  <a href="/create">+ New Post</a>
 {{else}}
   <a href="/login">You must login first to view this page</a>
 {{/if}}
 
-<script src="./js/newPost.js"></script> 
+<script src="/js/newPost.js"></script>

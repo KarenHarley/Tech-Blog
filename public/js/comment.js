@@ -7,14 +7,14 @@ const handleCommentSubmit = async (event) => {
   let belongs_to_post = event.target.getAttribute("data-postId");
   console.log(belongs_to_post);
   let content = comment.value;
-  //let writer = req.session.id;
+  
   const response = await fetch("/new/comment", {
     method: "POST",
-   // credentials: "include",
+
     body: JSON.stringify({
       belongs_to_post: belongs_to_post,
       content: content,
-      //  writer: writer,
+
     }),
     headers: {
       "Content-Type": "application/json",
