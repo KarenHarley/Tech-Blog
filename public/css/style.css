@@ -200,6 +200,9 @@ label {
 .onePost {
   background-color: rgb(206, 206, 206);
 }
+#spanForDashboard{
+  float: right;
+}
 @media screen and (min-width: 768px) {
   .usernameAndDate {
     float: right; /*only works for big screens */

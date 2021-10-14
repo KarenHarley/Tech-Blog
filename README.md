@@ -33,14 +33,48 @@ After entering into the website, you can do the following.
 
 
 ### Website Pictures
+<br/>
 
-Below you will see the first page of this application, then the second page
+Below you will see the first page of this application
 
 <br/>
 <br/>
 
-![first page](./pics/first-page.png)
-![second page](./pics/website.png)
+![home](./pics/home.png)
+
+<br/>
+
+Below you will see the comment section of this application
+
+<br/>
+
+![comments](./pics/comments.png)
+
+<br/>
+
+Below you will see the dashboard page of this application for seeing created posts
+
+<br/>
+
+![comments](./pics/comments.png)
+
+<br/>
+
+Below you will see the dashboard page of this application for seeing created posts
+
+<br/>
+
+![comments](./pics/comments.png)
+
+<br/>
+
+Below you will see the edit page of this application for updating a post or deleting it 
+
+<br/>
+
+![comments](./pics/comments.png)
+
+<br/>
 
 # Website URl
 
