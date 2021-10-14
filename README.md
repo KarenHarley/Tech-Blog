@@ -35,60 +35,57 @@ After entering into the website, you can do the following.
 ### Website Pictures
 <br/>
 
-Below you will see the first page of this application
+# Below you will see the first page of this application
 
 <br/>
 
 ![home](./pics/home.png)
 
-<br/>
-
-Below you will see the login page 
-
-<br/>
-
-![comments](./pics/login.png)
 
 
-
+# Below you will see the login page 
 
 <br/>
 
-Below you will see the comment section of this application
+![login](./pics/login.png)
+
+<br/>
+
+# Below you will see the comment section of this application
 
 <br/>
 
 ![comments](./pics/comments.png)
 
-<br/>
 
-Below you will see the dashboard page of this application for seeing created posts
+
+# Below you will see the dashboard page of this application for seeing created posts
 
 <br/>
 
 ![dashboard](./pics/dashboard.png)
 
-<br/>
 
-Below you will see the create page of this application for updating a post or deleting it 
 
-<br/>
-
-![comments](./pics/create.png)
+# Below you will see the create page of this application for updating a post or deleting it 
 
 <br/>
 
-Below you will see the edit page of this application for updating a post or deleting it 
+![create](./pics/create.png)
+
+
+
+# Below you will see the edit page of this application for updating a post or deleting it 
 
 <br/>
 
-![comments](./pics/edit.png)
+![edit](./pics/edit.png)
 
 <br/>
 
 
 
-# Website URl
+# Website URL
 
 https://mighty-reaches-19141.herokuapp.com/
 
