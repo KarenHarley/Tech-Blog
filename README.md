@@ -38,9 +38,19 @@ After entering into the website, you can do the following.
 Below you will see the first page of this application
 
 <br/>
-<br/>
 
 ![home](./pics/home.png)
+
+<br/>
+
+Below you will see the login page 
+
+<br/>
+
+![comments](./pics/login.png)
+
+
+
 
 <br/>
 
@@ -56,15 +66,15 @@ Below you will see the dashboard page of this application for seeing created pos
 
 <br/>
 
-![comments](./pics/comments.png)
+![dashboard](./pics/dashboard.png)
 
 <br/>
 
-Below you will see the dashboard page of this application for seeing created posts
+Below you will see the create page of this application for updating a post or deleting it 
 
 <br/>
 
-![comments](./pics/comments.png)
+![comments](./pics/create.png)
 
 <br/>
 
@@ -72,13 +82,15 @@ Below you will see the edit page of this application for updating a post or dele
 
 <br/>
 
-![comments](./pics/comments.png)
+![comments](./pics/edit.png)
 
 <br/>
 
+
+
 # Website URl
 
-https://powerful-river-57581.herokuapp.com/
+https://mighty-reaches-19141.herokuapp.com/
 
 
 ## License
