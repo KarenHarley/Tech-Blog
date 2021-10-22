@@ -4,7 +4,7 @@
 
 ## Description
 
-This application allows users that are not signed up or logged in to view all of the blog posts and even the comments found when clicking on a specific post. When the user signs up or logs in, then they can comment on a post and even create their own. The user also has the ablity to update or delete a created post. 
+This application allows users that are not signed up or logged in to view all of the blog posts and even see the comments when clicking on a specific post. When the user signs up or logs in, then they can comment on a post and even create their own. The user also has the ablity to update or delete a created post. 
 
 ## Table of Contents
 
@@ -96,7 +96,7 @@ The license used for this project: MIT
 
 ## Contribute
 
-If you would like to contribute please contact me.
+If you would like to contribute please contact me!
 
 ## Questions
 
