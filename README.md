@@ -13,7 +13,7 @@ This application allows all users even those that are not signed up or logged in
 - [How to Contribute](#contribute)
 - [Questions](#questions)
 
-  ## Usage
+## Usage
 After entering into the website, you can do the following.
 
 1. Login or Sign up.
