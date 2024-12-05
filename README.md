@@ -1,8 +1,8 @@
 [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/DAVFoundation/captain-n3m0/blob/master/LICENSE)
 
-# Tech Blog
+## Tech Blog
 
-## Description
+### Description
 
 This application allows all users even those that are not signed up or logged in to view all of the blog posts and even see the comments when clicking on a specific post. When the user signs up or logs in, they can now comment on a post and even create their own. The user also has the ablity to update or delete a created post. 
 
@@ -13,7 +13,7 @@ This application allows all users even those that are not signed up or logged in
 - [How to Contribute](#contribute)
 - [Questions](#questions)
 
-## Usage
+### Usage
 After entering into the website, you can do the following.
 
 1. Login or Sign up.
