@@ -40,7 +40,7 @@ After entering into the website, you can do the following.
 
 
 
-# Below you will see the login page 
+### Below you will see the login page 
 
 <br/>
 
@@ -48,7 +48,7 @@ After entering into the website, you can do the following.
 
 <br/>
 
-# Below you will see the comment section of this application
+### Below you will see the comment section of this application
 
 <br/>
 
@@ -56,7 +56,7 @@ After entering into the website, you can do the following.
 
 
 
-# Below you will see the dashboard page of this application for seeing created posts
+### Below you will see the dashboard page of this application for seeing created posts
 
 <br/>
 
@@ -64,7 +64,7 @@ After entering into the website, you can do the following.
 
 
 
-# Below you will see the create page of this application for updating a post or deleting it 
+### Below you will see the create page of this application for updating a post or deleting it 
 
 <br/>
 
@@ -72,7 +72,7 @@ After entering into the website, you can do the following.
 
 
 
-# Below you will see the edit page of this application for updating a post or deleting it 
+### Below you will see the edit page of this application for updating a post or deleting it 
 
 <br/>
 
@@ -82,20 +82,20 @@ After entering into the website, you can do the following.
 
 
 
-# Website URL
+### Website URL
 
 https://mighty-reaches-19141.herokuapp.com/
 
 
-## License
+### License
 
 The license used for this project: MIT
 
-## Contribute
+### Contribute
 
 If you would like to contribute please contact me!
 
-## Questions
+### Questions
 
 To reach me please contact me in the email address below!
 
