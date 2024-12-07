@@ -32,55 +32,34 @@ After entering into the website, you can do the following.
 ### Website Pictures
 <br/>
 
-# Below you will see the first page of this application
-
-<br/>
+### Below you will see the first page of this application
 
 ![home](./pics/home.png)
 
 
-
 ### Below you will see the login page 
-
-<br/>
 
 ![login](./pics/login.png)
 
-<br/>
-
 ### Below you will see the comment section of this application
-
-<br/>
 
 ![comments](./pics/comments.png)
 
 
-
 ### Below you will see the dashboard page of this application for seeing created posts
 
-<br/>
 
 ![dashboard](./pics/dashboard.png)
 
 
-
 ### Below you will see the create page of this application for updating a post or deleting it 
-
-<br/>
 
 ![create](./pics/create.png)
 
 
-
 ### Below you will see the edit page of this application for updating a post or deleting it 
 
-<br/>
-
 ![edit](./pics/edit.png)
-
-<br/>
-
-
 
 ### Website URL
 
