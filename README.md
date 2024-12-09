@@ -30,12 +30,10 @@ After entering into the website, you can do the following.
 
 
 ### Website Pictures
-<br/>
 
 #### Below you will see the first page of this application
 
 ![home](./pics/home.png)
-
 
 #### Below you will see the login page 
 
@@ -45,17 +43,13 @@ After entering into the website, you can do the following.
 
 ![comments](./pics/comments.png)
 
-
 #### Below you will see the dashboard page of this application for seeing created posts
 
-
 ![dashboard](./pics/dashboard.png)
-
 
 #### Below you will see the create page of this application for updating a post or deleting it 
 
 ![create](./pics/create.png)
-
 
 #### Below you will see the edit page of this application for updating a post or deleting it 
 
